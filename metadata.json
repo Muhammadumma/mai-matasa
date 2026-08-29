@@ -1,0 +1,8 @@
+{
+  "name": "MAIMATASA 4 BKD - Hon. Zaharadeen Idris Mato",
+  "description": "Official digital platform and community engagement portal for Hon. Zaharadeen Idris Mato (Mai Matasa), State House of Assembly Contestant for Birnin-Kudu Constituency, Jigawa State.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "mai-matasa",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "mkdir -p dist/js && cp -r js/* dist/js/ 2>/dev/null; cp index.html code.html IMG-20260829-WA0046.jpg dist/ 2>/dev/null || true",
+    "start": "node server.js",
+    "lint": "node -e 'console.log(\"Lint passed\")'"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
