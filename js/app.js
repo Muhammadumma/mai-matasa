@@ -3,10 +3,10 @@ import { CANDIDATE_INFO, PILLARS, WARDS_DATA, INITIAL_NEWS, INITIAL_EVENTS, SEED
 
 // Application State
 const STATE_KEYS = {
-  APPLICATIONS: 'maimatasa_applications_v1',
-  FEEDBACK: 'maimatasa_feedback_v1',
-  NEWS: 'maimatasa_news_v1',
-  EVENTS: 'maimatasa_events_v1',
+  APPLICATIONS: 'maimatasa_applications_v2',
+  FEEDBACK: 'maimatasa_feedback_v2',
+  NEWS: 'maimatasa_news_v2',
+  EVENTS: 'maimatasa_events_v2',
   ADMIN_AUTH: 'maimatasa_admin_auth'
 };
 

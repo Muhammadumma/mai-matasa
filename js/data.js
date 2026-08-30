@@ -120,7 +120,7 @@ export const INITIAL_NEWS = [
   {
     id: "news-1",
     title: "Hon. Zaharadeen Idris Mato Unveils Transformative 5-Pillar Blueprint for Birnin-Kudu",
-    category: "Community",
+    category: "Candidate Blueprint",
     date: "August 28, 2026",
     readTime: "4 min read",
     image: "/IMG-20260829-WA0046.jpg",
@@ -130,32 +130,22 @@ export const INITIAL_NEWS = [
   {
     id: "news-2",
     title: "Mai Matasa Digital Portal Launches Official Polling Unit & Volunteer Registration",
-    category: "Youth",
+    category: "Community & Youth",
     date: "August 24, 2026",
     readTime: "3 min read",
-    image: "/IMG-20260829-WA0046.jpg",
+    image: "/src/assets/images/community_youth_rally_1788043172926.jpg",
     summary: "The MAIMATASA 4 BKD digital platform opens official registration for volunteers, ward representatives, and polling unit coordinators across all 11 wards of Birnin-Kudu.",
     content: "In line with modern participatory democracy, the campaign organisation has unveiled its high-tech interactive portal (www.maimatasa4bkd.org). The platform enables qualified citizens to register as campaign ambassadors, verify polling unit assignments, track application statuses, and contribute directly to grassroots initiatives."
   },
   {
     id: "news-3",
     title: "Empowering Jigawa Women: Micro-Credit and Skills Framework Announced",
-    category: "Women",
+    category: "Women & Enterprise",
     date: "August 19, 2026",
     readTime: "5 min read",
-    image: "/IMG-20260829-WA0046.jpg",
+    image: "/src/assets/images/women_enterprise_jigawa_1788043186529.jpg",
     summary: "A specialized framework dedicated to supporting 2,000+ women entrepreneurs across Birnin-Kudu with financial literacy workshops and cooperative funding mechanisms.",
     content: "Recognizing women as the bedrock of domestic stability and community commerce, Hon. Zaharadeen Idris Mato announced a targeted capacity building roadmap. Working with established women cooperative societies, the initiative will facilitate structured access to micro-grants, vocational toolkits, and market linkage programs."
-  },
-  {
-    id: "news-4",
-    title: "Birnin-Kudu Unity Football Cup 2026 Announced to Kickoff Across 11 Wards",
-    category: "Sports",
-    date: "August 12, 2026",
-    readTime: "3 min read",
-    image: "/IMG-20260829-WA0046.jpg",
-    summary: "Over 32 grassroots youth teams will compete in the upcoming Birnin-Kudu Unity Cup to promote peace, fitness, and scout professional talent.",
-    content: "Hon. Zaharadeen Idris Mato's sports committee has finalized arrangements for the biggest inter-ward soccer tournament in Birnin-Kudu history. Scouts from regional leagues and national academies have been invited to discover emerging football stars."
   }
 ];
 
