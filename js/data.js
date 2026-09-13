@@ -107,7 +107,7 @@ export const WARDS_DATA = [
     id: "birnin_kudu",
     name: "Birnin Kudu",
     pollingUnits: 52,
-    communities: ["Dutsawa", "Magajin Gari", "SPS Ciki", "Kofar Fada", "Tudun Mahauta", "Social Welfare", "Gidan Mai", "Itakanki", "Kofar Bai", "Sabon Gari", "Daurawa", "Dagwara", "Tunfafi", "Zar[...]"],
+    communities: ["Dutsawa", "Magajin Gari", "SPS Ciki", "Kofar Fada", "Tudun Mahauta", "Social Welfare", "Gidan Mai", "Itakanki", "Kofar Bai", "Sabon Gari", "Daurawa", "Dagwara", "Tunfafi"],
     coordinator: "Ya'u Musa Dokoro Wurno",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
@@ -115,7 +115,7 @@ export const WARDS_DATA = [
     id: "kangire",
     name: "Kangire",
     pollingUnits: 33,
-    communities: ["Kangire Yamma", "Gwala", "Kangire Gabas", "Rigar Fadama", "Unguwar Lemo", "Janruwa", "Gidan Bello", "Shawu", "Dumus Tsangaya", "Yalwa", "Waza", "Halimbe", "Kurima", "Babban Tit[...]"],
+    communities: ["Kangire Yamma", "Gwala", "Kangire Gabas", "Rigar Fadama", "Unguwar Lemo", "Janruwa", "Gidan Bello", "Shawu", "Dumus Tsangaya", "Yalwa", "Waza", "Halimbe", "Kurima"],
     coordinator: "Abubakar S. Fawa Kiyako",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
@@ -123,7 +123,7 @@ export const WARDS_DATA = [
     id: "kantoga",
     name: "Kantoga",
     pollingUnits: 32,
-    communities: ["Kantoga Gari", "Kantoga Gorawa", "Unguwar Galadima", "Wudilawa", "Baji", "Karfawa", "Kadani", "Zanga", "Bagga Maudu", "Bigidan Kawari", "Tsara Dagaji", "Kyanka", "Kulumi", "Kar[...]"],
+    communities: ["Kantoga Gari", "Kantoga Gorawa", "Unguwar Galadima", "Wudilawa", "Baji", "Karfawa", "Kadani", "Zanga", "Bagga Maudu", "Bigidan Kawari", "Tsara Dagaji", "Kyanka", "Kulumi"],
     coordinator: "Tukur Abdullahi Unguwar 'ya",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
@@ -131,7 +131,7 @@ export const WARDS_DATA = [
     id: "kiyako",
     name: "Kiyako",
     pollingUnits: 27,
-    communities: ["Kiyako Central", "Bakin Kasuwa", "Gidan Dashi", "Sarkin Gabas", "Burum Kanawa", "Zarena", "Barwa", "Bamaina Fada", "Gajala", "Bururuwa", "Babaldu Kudu", "Babaldu Arewa", "Ganga[...]"],
+    communities: ["Kiyako Central", "Bakin Kasuwa", "Gidan Dashi", "Sarkin Gabas", "Burum Kanawa", "Zarena", "Barwa", "Bamaina Fada", "Gajala", "Bururuwa", "Babaldu Kudu", "Babaldu Arewa"],
     coordinator: "Gaddafi Garba Lafiya",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
@@ -139,7 +139,7 @@ export const WARDS_DATA = [
     id: "kwangwara",
     name: "Kwangwara",
     pollingUnits: 18,
-    communities: ["Kwangwara Tsakiya", "Kwangwara Zazzagawa", "Bakin Kuja", "Madakin Shiba", "Hirin Gari", "Maichediya", "Andazawa", "Arewawa", "Kadangare", "Zazika Gari", "Zazika Yamma", "Nafada[...]"],
+    communities: ["Kwangwara Tsakiya", "Kwangwara Zazzagawa", "Bakin Kuja", "Madakin Shiba", "Hirin Gari", "Maichediya", "Andazawa", "Arewawa", "Kadangare", "Zazika Gari", "Zazika Yamma"],
     coordinator: "Ibrahm Isma'il kwangwara",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
@@ -147,7 +147,7 @@ export const WARDS_DATA = [
     id: "lafiya",
     name: "Lafiya",
     pollingUnits: 18,
-    communities: ["Lafiya Town", "Jikaina", "Kuwo Sabuwa", "Kura Sabuwa", "Kura Tsohuwa", "Kewaya", "Ladduga", "Masaya", "Damukashi", "Jigawar Nasara", "Gobirawa", "Sabuwar Jigawa", "Tukuda Arewa[...]"],
+    communities: ["Lafiya Town", "Jikaina", "Kuwo Sabuwa", "Kura Sabuwa", "Kura Tsohuwa", "Kewaya", "Ladduga", "Masaya", "Damukashi", "Jigawar Nasara", "Gobirawa", "Sabuwar Jigawa"],
     coordinator: "Basiru Yahuza Surko",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
@@ -171,7 +171,7 @@ export const WARDS_DATA = [
     id: "unguwar_ya",
     name: "Unguwar 'Ya",
     pollingUnits: 20,
-    communities: ["Unguwar 'Ya Fada", "Tudu Babba", "Tudun Mallam Musa", "Gogoriyo", "Gudale", "Kawo", "Unguwar Banga", "Dokokin Kawo", "Yarma", "Jiboga", "Kenawa", "Kauyendole", "Dakurma", "Kufa[...]"],
+    communities: ["Unguwar 'Ya Fada", "Tudu Babba", "Tudun Mallam Musa", "Gogoriyo", "Gudale", "Kawo", "Unguwar Banga", "Dokokin Kawo", "Yarma", "Jiboga", "Kenawa", "Kauyendole", "Dakurma"],
     coordinator: "Zaharaddin Muhd kantoga",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
@@ -179,7 +179,7 @@ export const WARDS_DATA = [
     id: "wurno",
     name: "Wurno",
     pollingUnits: 42,
-    communities: ["Wuro Fada", "Unguwar Magaji", "Unguwar Yari", "Rahaji", "Kullin Kota", "Nahuce Sambalisa", "Gargadi", "Tosoro", "Nasarawa", "Fi'l Fi'l", "Samamiya Gari", "Samamiya Ganta", "Gid[...]"],
+    communities: ["Wuro Fada", "Unguwar Magaji", "Unguwar Yari", "Rahaji", "Kullin Kota", "Nahuce Sambalisa", "Gargadi", "Tosoro", "Nasarawa", "Fi'l Fi'l", "Samamiya Gari", "Samamiya Ganta"],
     coordinator: "Y/Damai",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
@@ -187,12 +187,11 @@ export const WARDS_DATA = [
     id: "yalwan_damai",
     name: "Yalwan Damai",
     pollingUnits: 32,
-    communities: ["Yalwan Damai Central", "Dokoki", "Kiyasawa", "Gidan Darge", "Gidan Sarkin Noma", "Gidan Sarkin Fulani", "Iggi", "Jambiri", "Kauyen Toshe", "Gulando", "Ramin Kura", "Budusu", "A[...]"],
+    communities: ["Yalwan Damai Central", "Dokoki", "Kiyasawa", "Gidan Darge", "Gidan Sarkin Noma", "Gidan Sarkin Fulani", "Iggi", "Jambiri", "Kauyen Toshe", "Gulando", "Ramin Kura", "Budusu"],
     coordinator: "Yusuf College B/kudu",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   }
 ];
-
 export const INITIAL_NEWS = [
   {
     id: "news-1",
