@@ -11,7 +11,7 @@ export const CANDIDATE_INFO = {
   email: "info@maimatasa4bkd.org",
   phone: "+234 803 000 4BKD",
   tagline: "Community • Youth • Women • Sports • Culture • Economic Development",
-  bio: "Hon. Zaharadeen Idris Mato, popularly known as Mai Matasa, is an accomplished banking professional, grassroots organizer, and dedicated community development advocate from Birnin-Kudu Constituency. His extensive career in the banking and financial services sector has equipped him with deep expertise in financial management, grassroots economic empowerment, enterprise scaling, and sustainable public service. His legislative blueprint is dedicated to transforming Birnin-Kudu through strategic youth empowerment, women advancement, modern agricultural value chains, sports revitalization, and cultural heritage conservation."
+  bio: "Hon. Zaharadeen Idris Mato, popularly known as Mai Matasa, is an accomplished banking professional, grassroots organizer, and dedicated community development advocate from Birnin-Kudu Cons[...]"
 };
 
 export const PILLARS = [
@@ -107,48 +107,48 @@ export const WARDS_DATA = [
     id: "birnin_kudu",
     name: "Birnin Kudu",
     pollingUnits: 52,
-    communities: ["Dutsawa", "Magajin Gari", "SPS Ciki", "Kofar Fada", "Tudun Mahauta", "Social Welfare", "Gidan Mai", "Itakanki", "Kofar Bai", "Sabon Gari", "Daurawa", "Dagwara", "Tunfafi", "Zarenawa", "Masamawa", "Guruzawa", "Chandan", "Babuwawa", "State Library", "Ulumiddin", "Zangon Quarters"],
-    coordinator: "Mal. Ibrahim Haruna",
+    communities: ["Dutsawa", "Magajin Gari", "SPS Ciki", "Kofar Fada", "Tudun Mahauta", "Social Welfare", "Gidan Mai", "Itakanki", "Kofar Bai", "Sabon Gari", "Daurawa", "Dagwara", "Tunfafi", "Zar[...]"],
+    coordinator: "Ya'u Musa Dokoro Wurno",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
     id: "kangire",
     name: "Kangire",
     pollingUnits: 33,
-    communities: ["Kangire Yamma", "Gwala", "Kangire Gabas", "Rigar Fadama", "Unguwar Lemo", "Janruwa", "Gidan Bello", "Shawu", "Dumus Tsangaya", "Yalwa", "Waza", "Halimbe", "Kurima", "Babban Titi", "Dangaje", "Zadau", "Firya", "Makwalla"],
-    coordinator: "Alh. Umar Faruk",
+    communities: ["Kangire Yamma", "Gwala", "Kangire Gabas", "Rigar Fadama", "Unguwar Lemo", "Janruwa", "Gidan Bello", "Shawu", "Dumus Tsangaya", "Yalwa", "Waza", "Halimbe", "Kurima", "Babban Tit[...]"],
+    coordinator: "Abubakar S. Fawa Kiyako",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
     id: "kantoga",
     name: "Kantoga",
     pollingUnits: 32,
-    communities: ["Kantoga Gari", "Kantoga Gorawa", "Unguwar Galadima", "Wudilawa", "Baji", "Karfawa", "Kadani", "Zanga", "Bagga Maudu", "Bigidan Kawari", "Tsara Dagaji", "Kyanka", "Kulumi", "Karofi", "Warwade", "Mungulo", "Kafin Gana", "Gatari"],
-    coordinator: "Comr. Aminu Danladi",
+    communities: ["Kantoga Gari", "Kantoga Gorawa", "Unguwar Galadima", "Wudilawa", "Baji", "Karfawa", "Kadani", "Zanga", "Bagga Maudu", "Bigidan Kawari", "Tsara Dagaji", "Kyanka", "Kulumi", "Kar[...]"],
+    coordinator: "Tukur Abdullahi Unguwar 'ya",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
     id: "kiyako",
     name: "Kiyako",
     pollingUnits: 27,
-    communities: ["Kiyako Central", "Bakin Kasuwa", "Gidan Dashi", "Sarkin Gabas", "Burum Kanawa", "Zarena", "Barwa", "Bamaina Fada", "Gajala", "Bururuwa", "Babaldu Kudu", "Babaldu Arewa", "Gangara", "Lunkude", "Tubako", "Dutsen Gur", "Kulum", "Jeke"],
-    coordinator: "Hajiya Maryam Saleh",
+    communities: ["Kiyako Central", "Bakin Kasuwa", "Gidan Dashi", "Sarkin Gabas", "Burum Kanawa", "Zarena", "Barwa", "Bamaina Fada", "Gajala", "Bururuwa", "Babaldu Kudu", "Babaldu Arewa", "Ganga[...]"],
+    coordinator: "Gaddafi Garba Lafiya",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
     id: "kwangwara",
     name: "Kwangwara",
     pollingUnits: 18,
-    communities: ["Kwangwara Tsakiya", "Kwangwara Zazzagawa", "Bakin Kuja", "Madakin Shiba", "Hirin Gari", "Maichediya", "Andazawa", "Arewawa", "Kadangare", "Zazika Gari", "Zazika Yamma", "Nafada", "Barikin Dan Giwa"],
-    coordinator: "Sanusi Abdullahi",
+    communities: ["Kwangwara Tsakiya", "Kwangwara Zazzagawa", "Bakin Kuja", "Madakin Shiba", "Hirin Gari", "Maichediya", "Andazawa", "Arewawa", "Kadangare", "Zazika Gari", "Zazika Yamma", "Nafada[...]"],
+    coordinator: "Ibrahm Isma'il kwangwara",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
     id: "lafiya",
     name: "Lafiya",
     pollingUnits: 18,
-    communities: ["Lafiya Town", "Jikaina", "Kuwo Sabuwa", "Kura Sabuwa", "Kura Tsohuwa", "Kewaya", "Ladduga", "Masaya", "Damukashi", "Jigawar Nasara", "Gobirawa", "Sabuwar Jigawa", "Tukuda Arewa", "Tukuda Kudu", "Jingina"],
-    coordinator: "Bello Murtala",
+    communities: ["Lafiya Town", "Jikaina", "Kuwo Sabuwa", "Kura Sabuwa", "Kura Tsohuwa", "Kewaya", "Ladduga", "Masaya", "Damukashi", "Jigawar Nasara", "Gobirawa", "Sabuwar Jigawa", "Tukuda Arewa[...]"],
+    coordinator: "Basiru Yahuza Surko",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
@@ -156,7 +156,7 @@ export const WARDS_DATA = [
     name: "Maiaduwa",
     pollingUnits: 25,
     communities: ["Maiaduwa Kasuwa", "Doka", "Katsinawa", "Garin Bature", "Garin Malam", "Unguwar Fada", "Kwangwara Road"],
-    coordinator: "Mustapha Garba",
+    coordinator: "Sani Muhammad sundimina",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
@@ -164,31 +164,31 @@ export const WARDS_DATA = [
     name: "Surko",
     pollingUnits: 14,
     communities: ["Surko Dugaji", "Sarkin Gabas", "Budinga Mallawa", "Badingu P.S", "Badingu Fada", "Sakai", "Sabuwar Badingu", "Chagu", "Sabon Gari", "Budunga", "Gidan Ruwa"],
-    coordinator: "Kabiru Sani",
+    coordinator: "Usman Jibrin Kangire",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
     id: "unguwar_ya",
     name: "Unguwar 'Ya",
     pollingUnits: 20,
-    communities: ["Unguwar 'Ya Fada", "Tudu Babba", "Tudun Mallam Musa", "Gogoriyo", "Gudale", "Kawo", "Unguwar Banga", "Dokokin Kawo", "Yarma", "Jiboga", "Kenawa", "Kauyendole", "Dakurma", "Kufan Gaza"],
-    coordinator: "Hajiya Aisha Mohammed",
+    communities: ["Unguwar 'Ya Fada", "Tudu Babba", "Tudun Mallam Musa", "Gogoriyo", "Gudale", "Kawo", "Unguwar Banga", "Dokokin Kawo", "Yarma", "Jiboga", "Kenawa", "Kauyendole", "Dakurma", "Kufa[...]"],
+    coordinator: "Zaharaddin Muhd kantoga",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
     id: "wurno",
     name: "Wurno",
     pollingUnits: 42,
-    communities: ["Wuro Fada", "Unguwar Magaji", "Unguwar Yari", "Rahaji", "Kullin Kota", "Nahuce Sambalisa", "Gargadi", "Tosoro", "Nasarawa", "Fi'l Fi'l", "Samamiya Gari", "Samamiya Ganta", "Gidan Galadima", "Hambarawa", "Migawa", "Shingurun", "Dakwaro", "Yola Kwayam", "Halilawa", "Zaramba", "Jangargari", "Giwa"],
-    coordinator: "Comr. Zakari Lawan",
+    communities: ["Wuro Fada", "Unguwar Magaji", "Unguwar Yari", "Rahaji", "Kullin Kota", "Nahuce Sambalisa", "Gargadi", "Tosoro", "Nasarawa", "Fi'l Fi'l", "Samamiya Gari", "Samamiya Ganta", "Gid[...]"],
+    coordinator: "Y/Damai",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   },
   {
     id: "yalwan_damai",
     name: "Yalwan Damai",
     pollingUnits: 32,
-    communities: ["Yalwan Damai Central", "Dokoki", "Kiyasawa", "Gidan Darge", "Gidan Sarkin Noma", "Gidan Sarkin Fulani", "Iggi", "Jambiri", "Kauyen Toshe", "Gulando", "Ramin Kura", "Budusu", "Arobade", "Tsamiya Goma", "Gidan Barde", "Dangoli", "Likka", "Soli"],
-    coordinator: "Usman Dan-Gambo",
+    communities: ["Yalwan Damai Central", "Dokoki", "Kiyasawa", "Gidan Darge", "Gidan Sarkin Noma", "Gidan Sarkin Fulani", "Iggi", "Jambiri", "Kauyen Toshe", "Gulando", "Ramin Kura", "Budusu", "A[...]"],
+    coordinator: "Yusuf College B/kudu",
     subtitle: "Birnin-Kudu Constituency Representative Council"
   }
 ];
@@ -201,8 +201,8 @@ export const INITIAL_NEWS = [
     date: "August 28, 2026",
     readTime: "4 min read",
     image: "/IMG-20260829-WA0046.jpg",
-    summary: "At a historic consultative gathering in Birnin-Kudu, Hon. Zaharadeen Idris Mato (Mai Matasa) officially presented his comprehensive strategic agenda focusing on youth empowerment, women advancement, and economic transformation.",
-    content: "During a widely attended consultative assembly in Birnin-Kudu town, Hon. Zaharadeen Idris Mato (Mai Matasa) outlined his bold legislative priorities for the State House of Assembly. Drawing upon his robust experience in the Nigerian banking and finance sector, he emphasized that sustainable democracy must translate into measurable community development, modern digital skills for youth, dedicated financial support for women traders, and revitalized agricultural value chains."
+    summary: "At a historic consultative gathering in Birnin-Kudu, Hon. Zaharadeen Idris Mato (Mai Matasa) officially presented his comprehensive strategic agenda focusing on youth empowerment, w[...]",
+    content: "During a widely attended consultative assembly in Birnin-Kudu town, Hon. Zaharadeen Idris Mato (Mai Matasa) outlined his bold legislative priorities for the State House of Assembly.[...]"
   },
   {
     id: "news-2",
@@ -212,7 +212,7 @@ export const INITIAL_NEWS = [
     readTime: "3 min read",
     image: "/src/assets/images/community_youth_rally_1788043172926.jpg",
     summary: "The MAIMATASA 4 BKD digital platform opens official registration for volunteers, ward representatives, and polling unit coordinators across all 11 wards of Birnin-Kudu.",
-    content: "In line with modern participatory democracy, the campaign organisation has unveiled its high-tech interactive portal (www.maimatasa4bkd.org). The platform enables qualified citizens to register as campaign ambassadors, verify polling unit assignments, track application statuses, and contribute directly to grassroots initiatives."
+    content: "In line with modern participatory democracy, the campaign organisation has unveiled its high-tech interactive portal (www.maimatasa4bkd.org). The platform enables qualified citizens[...]"
   },
   {
     id: "news-3",
@@ -222,7 +222,7 @@ export const INITIAL_NEWS = [
     readTime: "5 min read",
     image: "/src/assets/images/women_enterprise_jigawa_1788043186529.jpg",
     summary: "A specialized framework dedicated to supporting 2,000+ women entrepreneurs across Birnin-Kudu with financial literacy workshops and cooperative funding mechanisms.",
-    content: "Recognizing women as the bedrock of domestic stability and community commerce, Hon. Zaharadeen Idris Mato announced a targeted capacity building roadmap. Working with established women cooperative societies, the initiative will facilitate structured access to micro-grants, vocational toolkits, and market linkage programs."
+    content: "Recognizing women as the bedrock of domestic stability and community commerce, Hon. Zaharadeen Idris Mato announced a targeted capacity building roadmap. Working with established wo[...]"
   }
 ];
 
