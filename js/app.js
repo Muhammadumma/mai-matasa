@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWardsDropdowns();
   renderPillars();
   renderWardsGrid();
+  selectWardDetail('birnin_kudu', false); // Initialize featured ward banner
   renderNews();
   renderEvents();
   setupGetInvolvedTabs();
@@ -169,65 +170,127 @@ function renderWardsGrid() {
   if (!container) return;
 
   container.innerHTML = WARDS_DATA.map(ward => `
-    <div class="bg-surface-container p-5 rounded-xl border border-outline-variant/30 hover:border-primary transition-all cursor-pointer group" onclick="window.selectWardDetail('${ward.id}')">
+    <div id="ward-card-${ward.id}" class="ward-grid-card bg-surface-container p-5 rounded-2xl border border-outline-variant/30 hover:border-stately-gold transition-all cursor-pointer group hover:shadow-lg hover:-translate-y-0.5" data-ward-id="${ward.id}" onclick="window.selectWardDetail('${ward.id}', true)">
       <div class="flex items-center justify-between mb-2">
-        <h4 class="font-bold text-primary text-base group-hover:text-action-green transition-colors">${ward.name} Ward</h4>
-        <span class="px-2 py-0.5 rounded-full bg-primary-container text-stately-gold text-xs font-bold">${ward.pollingUnits} PUs</span>
+        <h4 class="font-headline font-bold text-primary text-base group-hover:text-action-green transition-colors">${ward.name} Ward</h4>
+        <span class="px-2.5 py-1 rounded-full bg-primary text-stately-gold text-xs font-headline font-bold border border-stately-gold/30">${ward.pollingUnits} PUs</span>
       </div>
-      <p class="text-xs text-on-surface-variant mb-3">Coord: <span class="font-semibold text-on-surface">${ward.coordinator}</span></p>
+      <p class="text-xs text-on-surface-variant mb-3 font-body">Coord: <span class="font-semibold text-on-surface">${ward.coordinator}</span></p>
       <div class="flex flex-wrap gap-1">
         ${ward.communities.slice(0, 3).map(c => `
-          <span class="text-[11px] px-2 py-0.5 rounded bg-surface text-on-surface-variant border border-outline-variant/20">${c}</span>
+          <span class="text-[11px] px-2 py-0.5 rounded bg-surface text-on-surface-variant border border-outline-variant/20 font-body">${c}</span>
         `).join('')}
-        ${ward.communities.length > 3 ? `<span class="text-[11px] px-1.5 py-0.5 text-on-surface-variant font-bold">+${ward.communities.length - 3}</span>` : ''}
+        ${ward.communities.length > 3 ? `<span class="text-[11px] px-1.5 py-0.5 text-secondary font-bold font-headline">+${ward.communities.length - 3}</span>` : ''}
       </div>
     </div>
   `).join('');
 }
 
-window.selectWardDetail = function(wardId) {
+window.selectWardDetail = function(wardId, scroll = true) {
   const ward = WARDS_DATA.find(w => w.id === wardId);
   if (!ward) return;
+
+  // Highlight active ward card in grid
+  document.querySelectorAll('.ward-grid-card').forEach(card => {
+    if (card.getAttribute('data-ward-id') === ward.id) {
+      card.classList.add('border-stately-gold', 'ring-2', 'ring-stately-gold/50', 'bg-surface');
+      card.classList.remove('border-outline-variant/30', 'bg-surface-container');
+    } else {
+      card.classList.remove('border-stately-gold', 'ring-2', 'ring-stately-gold/50', 'bg-surface');
+      card.classList.add('border-outline-variant/30', 'bg-surface-container');
+    }
+  });
 
   const detailBox = document.getElementById('ward-detail-display');
   if (!detailBox) return;
 
   detailBox.innerHTML = `
-    <div class="p-6 bg-primary text-on-primary rounded-2xl shadow-xl relative overflow-hidden border-2 border-stately-gold/40">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-        <div>
-          <span class="px-3 py-1 rounded-full bg-primary-container text-stately-gold text-xs font-bold tracking-wider uppercase border border-stately-gold/30">Birnin-Kudu Constituency</span>
-          <h3 class="text-3xl font-bold font-headline-md text-white mt-2">${ward.name} Ward Structure</h3>
+    <div id="ward-banner-card" class="bg-[#0B3B26] text-white rounded-2xl md:rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-stately-gold/60 relative overflow-hidden transition-all duration-300">
+      <!-- Background subtle gradient accent -->
+      <div class="absolute -right-16 -top-16 w-72 h-72 bg-stately-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/15 relative z-10">
+        <div class="space-y-1.5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-stately-gold/20 border border-stately-gold/50 text-stately-gold text-[11px] font-headline font-extrabold uppercase tracking-widest">
+            <span class="w-2 h-2 rounded-full bg-stately-gold animate-pulse"></span>
+            BIRNIN-KUDU CONSTITUENCY
+          </div>
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-headline font-extrabold text-white tracking-tight">
+            ${ward.name} Ward Structure
+          </h3>
         </div>
-        <div class="flex items-center gap-3">
-          <div class="text-right">
-            <span class="text-xs text-on-primary-container block">Accredited Polling Units</span>
-            <span class="text-2xl font-bold text-stately-gold">${ward.pollingUnits} Units</span>
+
+        <div class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary/80 border border-stately-gold/40 text-stately-gold shadow-sm self-start md:self-auto">
+          <span class="material-symbols-outlined text-xl text-stately-gold">how_to_vote</span>
+          <span class="text-xs sm:text-sm font-headline font-bold text-white">
+            Accredited Polling Units: <span class="text-stately-gold text-base font-extrabold">${ward.pollingUnits} Units</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Main Content (2 Columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6 relative z-10">
+        <!-- Left Box: Ward Coordinator -->
+        <div class="bg-primary/60 p-5 sm:p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-stately-gold text-xs font-headline font-bold uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">person</span>
+              <span>WARD COORDINATOR</span>
+            </div>
+            <p class="text-xl sm:text-2xl font-headline font-extrabold text-white mb-1">
+              ${ward.coordinator}
+            </p>
+            <p class="text-xs text-on-primary-container font-body leading-relaxed">
+              ${ward.subtitle || 'Birnin-Kudu Constituency Representative Council'}
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-white/10 flex items-center gap-2 text-xs text-stately-gold font-headline font-medium">
+            <span class="material-symbols-outlined text-base">verified</span>
+            <span>Official Constituency Liaison</span>
+          </div>
+        </div>
+
+        <!-- Right Box: Key Communities / Units -->
+        <div class="bg-primary/60 p-5 sm:p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-stately-gold text-xs font-headline font-bold uppercase tracking-wider mb-3">
+              <span class="material-symbols-outlined text-base">location_city</span>
+              <span>KEY COMMUNITIES / UNITS</span>
+            </div>
+            <p class="text-xs sm:text-sm text-white/95 font-body leading-relaxed flex flex-wrap gap-2 items-center">
+              ${ward.communities.map(c => `
+                <span class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-lg border border-white/10 text-xs font-medium text-white shadow-sm">
+                  <span class="w-1.5 h-1.5 rounded-full bg-stately-gold"></span>
+                  ${c}
+                </span>
+              `).join('')}
+            </p>
+          </div>
+          <div class="mt-4 text-[11px] text-on-primary-container font-body">
+            Showing key accredited polling units and communities registered in ${ward.name} Ward.
           </div>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-primary-container/60 p-4 rounded-xl border border-primary-fixed-dim/20">
-          <span class="text-xs font-bold text-stately-gold uppercase tracking-wider block mb-1">Ward Coordinator</span>
-          <p class="text-base font-bold text-white">${ward.coordinator}</p>
-          <p class="text-xs text-on-primary-container">Birnin-Kudu Constituency Representative Council</p>
+      <!-- Call-to-Action Bar -->
+      <div class="pt-5 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
+        <div class="flex items-center gap-2 text-xs sm:text-sm text-on-primary-container font-headline font-medium">
+          <span class="material-symbols-outlined text-stately-gold text-lg">badge</span>
+          <span>Want to serve as Polling Unit or Ward Representative in <strong>${ward.name}</strong>?</span>
         </div>
-        <div class="bg-primary-container/60 p-4 rounded-xl border border-primary-fixed-dim/20">
-          <span class="text-xs font-bold text-stately-gold uppercase tracking-wider block mb-1">Key Communities / Units</span>
-          <p class="text-sm text-white">${ward.communities.join(' • ')}</p>
-        </div>
-      </div>
 
-      <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-primary-fixed-dim/20">
-        <p class="text-xs text-on-primary-container">Want to serve as Polling Unit or Ward Representative in ${ward.name}?</p>
-        <a href="#get-involved" onclick="selectRoleAndWard('Polling Unit Representative', '${ward.name}')" class="px-4 py-2 bg-stately-gold text-primary rounded-lg font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors inline-flex items-center gap-1">
-          Apply for ${ward.name} <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        <a href="#get-involved" onclick="window.selectRoleAndWard('Polling Unit Representative', '${ward.name}')" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-stately-gold text-primary font-headline text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-white transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
+          <span>APPLY FOR ${ward.name.toUpperCase()}</span>
+          <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
         </a>
       </div>
     </div>
   `;
-  detailBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  if (scroll) {
+    detailBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
 };
 
 window.selectRoleAndWard = function(role, wardName) {
@@ -448,44 +511,129 @@ function setupVolunteerForm() {
   const form = document.getElementById('volunteer-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  const submitBtn = document.getElementById('volunteer-submit-btn');
+  const btnText = document.getElementById('volunteer-btn-text');
+  const btnIcon = document.getElementById('volunteer-btn-icon');
+  const statusAlert = document.getElementById('volunteer-status-alert');
+
+  function showStatus(message, isSuccess = true) {
+    if (!statusAlert) {
+      alert(message);
+      return;
+    }
+    statusAlert.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-900', 'border-emerald-400', 'bg-red-50', 'text-red-900', 'border-red-400', 'border');
+    if (isSuccess) {
+      statusAlert.classList.add('bg-emerald-50', 'text-emerald-900', 'border', 'border-emerald-400');
+      statusAlert.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-emerald-600">check_circle</span>
+          <span class="font-headline font-bold text-sm">${message}</span>
+        </div>
+      `;
+    } else {
+      statusAlert.classList.add('bg-red-50', 'text-red-900', 'border', 'border-red-400');
+      statusAlert.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-red-600">error</span>
+          <span class="font-headline font-bold text-sm">${message}</span>
+        </div>
+      `;
+    }
+    statusAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    if (statusAlert) statusAlert.classList.add('hidden');
+
     const formData = new FormData(form);
     
-    // Checked Categories
-    const categories = [];
-    form.querySelectorAll('input[name="categories"]:checked').forEach(cb => categories.push(cb.value));
+    // Checked Interests
+    const selectedInterests = [];
+    form.querySelectorAll('input[name="interests"]:checked').forEach(cb => selectedInterests.push(cb.value));
 
-    const refNumber = `MM-VOL-${Math.floor(10000 + Math.random() * 90000)}`;
+    const fullName = (formData.get('fullName') || '').trim();
+    const phone = (formData.get('phone') || '').trim();
+    const email = (formData.get('email') || '').trim();
+    const gender = formData.get('gender') || '';
+    const age = formData.get('age') || formData.get('dob') || '';
+    const ward = (formData.get('ward') || '').trim();
+    const community = (formData.get('community') || '').trim();
+    const pollingUnit = (formData.get('pollingUnit') || '').trim();
+    const volunteerRole = (formData.get('volunteerRole') || '').trim();
+    const availability = (formData.get('availability') || '').trim();
+    const notes = (formData.get('notes') || formData.get('skills') || '').trim();
 
-    const newApp = {
-      refNumber,
-      type: "volunteer",
-      fullName: formData.get('fullName'),
-      phone: formData.get('phone'),
-      email: formData.get('email') || 'N/A',
-      gender: formData.get('gender'),
-      dob: formData.get('dob'),
-      lga: "Birnin Kudu",
-      constituency: "Birnin-Kudu Constituency",
-      ward: formData.get('ward'),
-      community: formData.get('community'),
-      pollingUnit: formData.get('pollingUnit') || 'General Ward Volunteer',
-      role: formData.get('preferredRole') || 'Community Volunteer',
-      categories: categories.length > 0 ? categories : ['Community Engagement'],
-      skills: formData.get('skills') || 'General Support',
-      availability: formData.get('availability'),
-      experience: formData.get('experience') || 'None specified',
-      status: "Submitted",
-      appliedDate: new Date().toISOString().split('T')[0],
-      notes: "Newly registered online volunteer"
+    // 1. Required Client Validation
+    if (!fullName || !phone || !ward) {
+      showStatus('Please complete all required fields: Full Name, Phone Number, and Ward.', false);
+      return;
+    }
+
+    // 2. Nigerian Phone Format Validation
+    const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
+    const isNigerianPhone = /^(\+?234|0)[789]\d{9}$/.test(cleanPhone);
+    if (!isNigerianPhone) {
+      showStatus('Please enter a valid Nigerian phone number (e.g. 08012345678 or +2348012345678).', false);
+      return;
+    }
+
+    const interestString = volunteerRole || (selectedInterests.length > 0 ? selectedInterests.join(', ') : 'Community Volunteer');
+
+    const payload = {
+      fullName,
+      name: fullName,
+      phone,
+      email,
+      gender,
+      age,
+      ward,
+      community,
+      pollingUnit,
+      interest: interestString,
+      volunteerRole,
+      interests: selectedInterests,
+      availability,
+      notes
     };
 
-    applications.unshift(newApp);
-    setStorage(STATE_KEYS.APPLICATIONS, applications);
-    form.reset();
+    // 3. UI: Disable submit button & show loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      if (btnText) btnText.textContent = 'Submitting Registration...';
+      if (btnIcon) btnIcon.textContent = 'hourglass_empty';
+    }
 
-    showSuccessSlip(newApp, "Volunteer Registration Successful!");
+    try {
+      const response = await fetch('/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && data.success) {
+        showStatus('Thank you! Your registration has been received.', true);
+        form.reset();
+      } else {
+        const errorMsg = data.error || 'Failed to submit registration. Please check your connection and try again.';
+        showStatus(errorMsg, false);
+      }
+    } catch (err) {
+      console.error('Volunteer registration submission error:', err);
+      showStatus('Network error communicating with the server. Please try again.', false);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        if (btnText) btnText.textContent = 'Submit Volunteer Registration';
+        if (btnIcon) btnIcon.textContent = 'send';
+      }
+    }
   });
 }
 

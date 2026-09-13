@@ -460,8 +460,8 @@
                     </select>
                   </div>
                   <div>
-                    <label class="block text-xs font-headline font-bold text-primary mb-1">Date of Birth *</label>
-                    <input type="date" name="dob" required class="w-full px-3 py-3 rounded-xl bg-surface border border-outline-variant/40 text-sm focus:border-primary outline-none"/>
+                    <label class="block text-xs font-headline font-bold text-primary mb-1">Age *</label>
+                    <input type="number" name="age" min="16" max="100" required class="w-full px-3 py-3 rounded-xl bg-surface border border-outline-variant/40 text-sm focus:border-primary outline-none" placeholder="e.g. 25"/>
                   </div>
                 </div>
               </div>
@@ -472,7 +472,7 @@
               <h4 class="font-headline text-xs font-bold uppercase tracking-wider text-secondary mb-3 flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-secondary"></span> 2. Constituency & Location Information
               </h4>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div>
                   <label class="block text-xs font-headline font-bold text-primary mb-1">Constituency / LGA</label>
                   <input type="text" value="Birnin-Kudu Constituency (BKD)" readonly class="w-full px-4 py-3 rounded-xl bg-surface-container border border-outline-variant/30 text-xs font-bold text-on-surface-variant outline-none"/>
@@ -487,6 +487,10 @@
                   <label class="block text-xs font-headline font-bold text-primary mb-1">Community / Village *</label>
                   <input type="text" name="community" required class="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant/40 text-sm focus:border-primary outline-none" placeholder="e.g. Bakin Kasuwa"/>
                 </div>
+                <div>
+                  <label class="block text-xs font-headline font-bold text-primary mb-1">Polling Unit (Optional)</label>
+                  <input type="text" name="pollingUnit" class="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant/40 text-sm focus:border-primary outline-none" placeholder="e.g. PU 004 Pri School"/>
+                </div>
               </div>
             </div>
 
@@ -497,51 +501,39 @@
               </h4>
               
               <div class="mb-4">
-                <label class="block text-xs font-headline font-bold text-primary mb-2">Select Volunteer Categories (Choose all that apply):</label>
+                <label class="block text-xs font-headline font-bold text-primary mb-2">Volunteer Role / Interests * (Choose key areas):</label>
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs">
                   <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
-                    <input type="checkbox" name="categories" value="Community Engagement" class="rounded text-primary"/>
-                    <span>Community Engagement</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
-                    <input type="checkbox" name="categories" value="Events" class="rounded text-primary"/>
-                    <span>Events & Logistics</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
-                    <input type="checkbox" name="categories" value="Youth Programs" checked class="rounded text-primary"/>
+                    <input type="checkbox" name="interests" value="Youth Mobilization" checked class="rounded text-primary"/>
                     <span>Youth Programs</span>
                   </label>
                   <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
-                    <input type="checkbox" name="categories" value="Women Programs" class="rounded text-primary"/>
+                    <input type="checkbox" name="interests" value="Women Empowerment" class="rounded text-primary"/>
                     <span>Women Programs</span>
                   </label>
                   <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
-                    <input type="checkbox" name="categories" value="Sports Activities" class="rounded text-primary"/>
+                    <input type="checkbox" name="interests" value="Sports Activities" class="rounded text-primary"/>
                     <span>Sports Activities</span>
                   </label>
                   <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
-                    <input type="checkbox" name="categories" value="Media and Communications" class="rounded text-primary"/>
+                    <input type="checkbox" name="interests" value="Culture & Heritage" class="rounded text-primary"/>
+                    <span>Culture & Arts</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
+                    <input type="checkbox" name="interests" value="Economic Development" checked class="rounded text-primary"/>
+                    <span>Economic Development</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
+                    <input type="checkbox" name="interests" value="Media & Communications" class="rounded text-primary"/>
                     <span>Media & Comms</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
-                    <input type="checkbox" name="categories" value="Technology Support" class="rounded text-primary"/>
-                    <span>Technology Support</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
-                    <input type="checkbox" name="categories" value="Administration" class="rounded text-primary"/>
-                    <span>Administration</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface border border-outline-variant/30 cursor-pointer hover:border-primary">
-                    <input type="checkbox" name="categories" value="Community Development" checked class="rounded text-primary"/>
-                    <span>Community Dev</span>
                   </label>
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs font-headline font-bold text-primary mb-1">Preferred Role Title</label>
-                  <input type="text" name="preferredRole" class="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant/40 text-sm focus:border-primary outline-none" placeholder="e.g. Ward Youth Mobilizer"/>
+                  <label class="block text-xs font-headline font-bold text-primary mb-1">Specific Volunteer Role *</label>
+                  <input type="text" name="volunteerRole" required class="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant/40 text-sm focus:border-primary outline-none" placeholder="e.g. Youth Mobilizer / Polling Unit Agent" value="Youth Mobilizer"/>
                 </div>
                 <div>
                   <label class="block text-xs font-headline font-bold text-primary mb-1">Availability *</label>
@@ -555,13 +547,17 @@
               </div>
 
               <div class="mt-4">
-                <label class="block text-xs font-headline font-bold text-primary mb-1">Skills & Previous Experience</label>
-                <textarea name="skills" rows="2" class="w-full px-4 py-2.5 rounded-xl bg-surface border border-outline-variant/40 text-sm focus:border-primary outline-none" placeholder="Briefly describe your skills (e.g. graphic design, public speaking, mobilization)..."></textarea>
+                <label class="block text-xs font-headline font-bold text-primary mb-1">Notes / Experience</label>
+                <textarea name="notes" rows="2" class="w-full px-4 py-2.5 rounded-xl bg-surface border border-outline-variant/40 text-sm focus:border-primary outline-none" placeholder="Any additional notes, skills, or comments..."></textarea>
               </div>
             </div>
 
-            <button type="submit" class="w-full py-4 rounded-xl bg-action-green text-on-primary font-headline text-sm font-bold uppercase tracking-wider hover:bg-stately-gold hover:text-primary transition-all shadow-lg">
-              Submit Volunteer Application & Generate Ref ID
+            <!-- Status Alert Container -->
+            <div id="volunteer-status-alert" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+            <button id="volunteer-submit-btn" type="submit" class="w-full py-4 rounded-xl bg-action-green text-on-primary font-headline text-sm font-bold uppercase tracking-wider hover:bg-stately-gold hover:text-primary transition-all shadow-lg flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+              <span id="volunteer-btn-text">Submit Volunteer Registration</span>
+              <span id="volunteer-btn-icon" class="material-symbols-outlined text-base">send</span>
             </button>
           </form>
         </div>

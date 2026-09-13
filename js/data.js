@@ -103,17 +103,94 @@ export const PILLARS = [
 ];
 
 export const WARDS_DATA = [
-  { id: "birnin_kudu", name: "Birnin Kudu", pollingUnits: 28, communities: ["Cikin Gari", "Fada", "Kwangwara Road", "Gidan Sarki", "Bakin Kasuwa"], coordinator: "Mal. Ibrahim Haruna" },
-  { id: "kangire", name: "Kangire", pollingUnits: 22, communities: ["Kangire Central", "Kafin Hausa", "Garin Bako", "Dantse"], coordinator: "Alh. Umar Faruk" },
-  { id: "kantoga", name: "Kantoga", pollingUnits: 19, communities: ["Kantoga Yamma", "Kantoga Gabas", "Zango", "Unguwar Madaki"], coordinator: "Comr. Aminu Danladi" },
-  { id: "kiyako", name: "Kiyako", pollingUnits: 24, communities: ["Kiyako Central", "Garin Malam", "Gidan Dogo", "Jeke"], coordinator: "Hajiya Maryam Saleh" },
-  { id: "kwangwara", name: "Kwangwara", pollingUnits: 20, communities: ["Kwangwara Fada", "Diga", "Bakin Kogi", "Kafin Gana"], coordinator: "Sanusi Abdullahi" },
-  { id: "lafiya", name: "Lafiya", pollingUnits: 21, communities: ["Lafiya Kudu", "Lafiya Arewa", "Sabon Gari", "Unguwar Galadima"], coordinator: "Bello Murtala" },
-  { id: "maiaduwa", name: "Maiaduwa", pollingUnits: 25, communities: ["Maiaduwa Kasuwa", "Doka", "Katsinawa", "Garin Bature"], coordinator: "Mustapha Garba" },
-  { id: "surko", name: "Surko", pollingUnits: 18, communities: ["Surko Central", "Tsamiyar Dila", "Garin Ali", "Chirawa"], coordinator: "Kabiru Sani" },
-  { id: "unguwar_ya", name: "Unguwar 'Ya", pollingUnits: 23, communities: ["Unguwar 'Ya Fada", "Kafin Madaki", "Bakin Rijiya", "Garin Shehu"], coordinator: "Hajiya Aisha Mohammed" },
-  { id: "wurno", name: "Wurno", pollingUnits: 26, communities: ["Wurno Fada", "Garin Tsakiya", "Kargo", "Dandi"], coordinator: "Comr. Zakari Lawan" },
-  { id: "yalwan_damai", name: "Yalwan Damai", pollingUnits: 22, communities: ["Yalwa Central", "Damai", "Bakin Dutse", "Zandam"], coordinator: "Usman Dan-Gambo" }
+  {
+    id: "birnin_kudu",
+    name: "Birnin Kudu",
+    pollingUnits: 52,
+    communities: ["Dutsawa", "Magajin Gari", "SPS Ciki", "Kofar Fada", "Tudun Mahauta", "Social Welfare", "Gidan Mai", "Itakanki", "Kofar Bai", "Sabon Gari", "Daurawa", "Dagwara", "Tunfafi", "Zarenawa", "Masamawa", "Guruzawa", "Chandan", "Babuwawa", "State Library", "Ulumiddin", "Zangon Quarters"],
+    coordinator: "Mal. Ibrahim Haruna",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "kangire",
+    name: "Kangire",
+    pollingUnits: 33,
+    communities: ["Kangire Yamma", "Gwala", "Kangire Gabas", "Rigar Fadama", "Unguwar Lemo", "Janruwa", "Gidan Bello", "Shawu", "Dumus Tsangaya", "Yalwa", "Waza", "Halimbe", "Kurima", "Babban Titi", "Dangaje", "Zadau", "Firya", "Makwalla"],
+    coordinator: "Alh. Umar Faruk",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "kantoga",
+    name: "Kantoga",
+    pollingUnits: 32,
+    communities: ["Kantoga Gari", "Kantoga Gorawa", "Unguwar Galadima", "Wudilawa", "Baji", "Karfawa", "Kadani", "Zanga", "Bagga Maudu", "Bigidan Kawari", "Tsara Dagaji", "Kyanka", "Kulumi", "Karofi", "Warwade", "Mungulo", "Kafin Gana", "Gatari"],
+    coordinator: "Comr. Aminu Danladi",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "kiyako",
+    name: "Kiyako",
+    pollingUnits: 27,
+    communities: ["Kiyako Central", "Bakin Kasuwa", "Gidan Dashi", "Sarkin Gabas", "Burum Kanawa", "Zarena", "Barwa", "Bamaina Fada", "Gajala", "Bururuwa", "Babaldu Kudu", "Babaldu Arewa", "Gangara", "Lunkude", "Tubako", "Dutsen Gur", "Kulum", "Jeke"],
+    coordinator: "Hajiya Maryam Saleh",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "kwangwara",
+    name: "Kwangwara",
+    pollingUnits: 18,
+    communities: ["Kwangwara Tsakiya", "Kwangwara Zazzagawa", "Bakin Kuja", "Madakin Shiba", "Hirin Gari", "Maichediya", "Andazawa", "Arewawa", "Kadangare", "Zazika Gari", "Zazika Yamma", "Nafada", "Barikin Dan Giwa"],
+    coordinator: "Sanusi Abdullahi",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "lafiya",
+    name: "Lafiya",
+    pollingUnits: 18,
+    communities: ["Lafiya Town", "Jikaina", "Kuwo Sabuwa", "Kura Sabuwa", "Kura Tsohuwa", "Kewaya", "Ladduga", "Masaya", "Damukashi", "Jigawar Nasara", "Gobirawa", "Sabuwar Jigawa", "Tukuda Arewa", "Tukuda Kudu", "Jingina"],
+    coordinator: "Bello Murtala",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "maiaduwa",
+    name: "Maiaduwa",
+    pollingUnits: 25,
+    communities: ["Maiaduwa Kasuwa", "Doka", "Katsinawa", "Garin Bature", "Garin Malam", "Unguwar Fada", "Kwangwara Road"],
+    coordinator: "Mustapha Garba",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "surko",
+    name: "Surko",
+    pollingUnits: 14,
+    communities: ["Surko Dugaji", "Sarkin Gabas", "Budinga Mallawa", "Badingu P.S", "Badingu Fada", "Sakai", "Sabuwar Badingu", "Chagu", "Sabon Gari", "Budunga", "Gidan Ruwa"],
+    coordinator: "Kabiru Sani",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "unguwar_ya",
+    name: "Unguwar 'Ya",
+    pollingUnits: 20,
+    communities: ["Unguwar 'Ya Fada", "Tudu Babba", "Tudun Mallam Musa", "Gogoriyo", "Gudale", "Kawo", "Unguwar Banga", "Dokokin Kawo", "Yarma", "Jiboga", "Kenawa", "Kauyendole", "Dakurma", "Kufan Gaza"],
+    coordinator: "Hajiya Aisha Mohammed",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "wurno",
+    name: "Wurno",
+    pollingUnits: 42,
+    communities: ["Wuro Fada", "Unguwar Magaji", "Unguwar Yari", "Rahaji", "Kullin Kota", "Nahuce Sambalisa", "Gargadi", "Tosoro", "Nasarawa", "Fi'l Fi'l", "Samamiya Gari", "Samamiya Ganta", "Gidan Galadima", "Hambarawa", "Migawa", "Shingurun", "Dakwaro", "Yola Kwayam", "Halilawa", "Zaramba", "Jangargari", "Giwa"],
+    coordinator: "Comr. Zakari Lawan",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  },
+  {
+    id: "yalwan_damai",
+    name: "Yalwan Damai",
+    pollingUnits: 32,
+    communities: ["Yalwan Damai Central", "Dokoki", "Kiyasawa", "Gidan Darge", "Gidan Sarkin Noma", "Gidan Sarkin Fulani", "Iggi", "Jambiri", "Kauyen Toshe", "Gulando", "Ramin Kura", "Budusu", "Arobade", "Tsamiya Goma", "Gidan Barde", "Dangoli", "Likka", "Soli"],
+    coordinator: "Usman Dan-Gambo",
+    subtitle: "Birnin-Kudu Constituency Representative Council"
+  }
 ];
 
 export const INITIAL_NEWS = [
